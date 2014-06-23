@@ -1,16 +1,15 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Important: 
-"       This requries that you install https://github.com/amix/vimrc !
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
 """"""""""""""""""""""""""""""
 " => Load pathogen paths
 """"""""""""""""""""""""""""""
-call pathogen#infect('~/.vimJuang/sources_forked/{}')
-call pathogen#infect('~/.vimJuang/sources_non_forked/{}')
+"call pathogen#infect('~/.vimJuang/sources_forked/{}')
+"call pathogen#infect('~/.vimJuang/sources_non_forked/{}')
+call pathogen#infect('~/.vimJuang/plugins/{}')
 call pathogen#helptags()
+
+""""""""""""""""""""""""""""""
+" => Taglist plugin
+""""""""""""""""""""""""""""""
+map <leader>l :TlistToggle<cr><c-h>
 
 """"""""""""""""""""""""""""""
 " => bufExplorer plugin
@@ -60,13 +59,6 @@ let g:user_zen_mode='a'
 
 
 """"""""""""""""""""""""""""""
-" => snipMate (beside <TAB> support <CTRL-j>)
-""""""""""""""""""""""""""""""
-ino <c-j> <c-r>=snipMate#TriggerSnippet()<cr>
-snor <c-j> <esc>i<right><c-r>=snipMate#TriggerSnippet()<cr>
-
-
-""""""""""""""""""""""""""""""
 " => Vim grep
 """"""""""""""""""""""""""""""
 let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
@@ -79,12 +71,6 @@ set grepprg=/bin/grep\ -nH
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark 
 map <leader>nf :NERDTreeFind<cr>
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vim-multiple-cursors
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:multi_cursor_next_key="\<C-s>"
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -105,15 +91,9 @@ let g:airline_detect_whitespace = 0
 let g:airline_section_z = '%3p%% %l:%c'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vimroom
+" => Goyo config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:goyo_width=100
 let g:goyo_margin_top = 2
 let g:goyo_margin_bottom = 2
 nnoremap <silent> <leader>z :Goyo<cr>
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Syntastic (syntax checker)
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:syntastic_python_checkers=['pyflakes']

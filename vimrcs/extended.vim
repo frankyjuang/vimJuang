@@ -1,11 +1,4 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Important: 
-"       This requries that you install https://github.com/amix/vimrc !
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => GUI related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set font according to system
@@ -36,7 +29,6 @@ set guioptions-=e
 set guitablabel=%M\ %t
 
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Turn persistent undo on 
 "    means that you can undo even when you close a buffer/VIM
@@ -64,15 +56,6 @@ cno $q <C-\>eDeleteTillSlash()<cr>
 " Bash like keys for the command line
 cnoremap <C-A>		<Home>
 cnoremap <C-E>		<End>
-cnoremap <C-K>		<C-U>
-
-cnoremap <C-P> <Up>
-cnoremap <C-N> <Down>
-
-" Map ½ to something useful
-map ½ $
-cmap ½ $
-imap ½ $
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
