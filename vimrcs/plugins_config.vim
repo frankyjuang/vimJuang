@@ -8,8 +8,8 @@
 """"""""""""""""""""""""""""""
 " => Load pathogen paths
 """"""""""""""""""""""""""""""
-call pathogen#infect('~/.vim_runtime/sources_forked/{}')
-call pathogen#infect('~/.vim_runtime/sources_non_forked/{}')
+call pathogen#infect('~/.vimJuang/sources_forked/{}')
+call pathogen#infect('~/.vimJuang/sources_non_forked/{}')
 call pathogen#helptags()
 
 """"""""""""""""""""""""""""""
@@ -35,7 +35,7 @@ map <leader>f :MRU<CR>
 if has("win16") || has("win32")
     " Don't do anything
 else
-    let g:yankring_history_dir = '~/.vim_runtime/temp_dirs/'
+    let g:yankring_history_dir = '~/.vimJuang/temp_dirs/'
 endif
 
 
@@ -96,9 +96,13 @@ au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vim-airline config (force color)
+" => vim-airline config 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:airline_theme="luna"
+let g:airline_theme="light"
+let g:airline_powerline_fonts = 1
+let g:airline_section_b = '%{getcwd()}'
+let g:airline_detect_whitespace = 0
+let g:airline_section_z = '%3p%% %l:%c'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vimroom
