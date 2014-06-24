@@ -1,0 +1,3 @@
+[submodule "plugins/bufexplorer"]
+	path = plugins/bufexplorer
+	url = https://github.com/jlanzarotta/bufexplorer.git
