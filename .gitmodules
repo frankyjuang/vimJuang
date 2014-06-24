@@ -4,3 +4,42 @@
 [submodule "plugins/ack.vim"]
 	path = plugins/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "plugins/ctrlp.vim"]
+	path = plugins/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "plugins/goyo.vim"]
+	path = plugins/goyo.vim
+	url = https://github.com/junegunn/goyo.vim.git
+[submodule "plugins/nerdtree"]
+	path = plugins/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "plugins/syntastic"]
+	path = plugins/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "plugins/taglist.vim"]
+	path = plugins/taglist.vim
+	url = https://github.com/vim-scripts/taglist.vim.git
+[submodule "plugins/ultisnips"]
+	path = plugins/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "plugins/vim-airline"]
+	path = plugins/vim-airline
+	url = https://github.com/bling/vim-airline.git
+[submodule "plugins/vim-commentary"]
+	path = plugins/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "plugins/vim-css-color"]
+	path = plugins/vim-css-color
+	url = https://github.com/skammer/vim-css-color.git
+[submodule "plugins/vim-expand-region"]
+	path = plugins/vim-expand-region
+	url = https://github.com/terryma/vim-expand-region.git
+[submodule "plugins/vim-indent-object"]
+	path = plugins/vim-indent-object
+	url = https://github.com/michaeljsmith/vim-indent-object.git
+[submodule "plugins/vim-snippets"]
+	path = plugins/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
+[submodule "plugins/vim-surround"]
+	path = plugins/vim-surround
+	url = https://github.com/tpope/vim-surround.git
