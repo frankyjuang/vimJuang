@@ -1,3 +1,6 @@
 [submodule "plugins/bufexplorer"]
 	path = plugins/bufexplorer
 	url = https://github.com/jlanzarotta/bufexplorer.git
+[submodule "plugins/ack.vim"]
+	path = plugins/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
