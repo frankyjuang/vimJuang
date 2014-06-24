@@ -19,6 +19,7 @@
 [submodule "plugins/taglist.vim"]
 	path = plugins/taglist.vim
 	url = https://github.com/vim-scripts/taglist.vim.git
+    ignore = dirty
 [submodule "plugins/ultisnips"]
 	path = plugins/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
@@ -34,6 +35,7 @@
 [submodule "plugins/vim-expand-region"]
 	path = plugins/vim-expand-region
 	url = https://github.com/terryma/vim-expand-region.git
+    ignore = dirty
 [submodule "plugins/vim-indent-object"]
 	path = plugins/vim-indent-object
 	url = https://github.com/michaeljsmith/vim-indent-object.git
