@@ -1,4 +1,6 @@
-cd ~/.vimJuang
+###Install Configurations###
+
+echo "Installing vimJuang Configurations..."
 
 echo 'set runtimepath+=~/.vimJuang
 
@@ -7,4 +9,14 @@ source ~/.vimJuang/vimrcs/filetypes.vim
 source ~/.vimJuang/vimrcs/plugins_config.vim
 source ~/.vimJuang/vimrcs/extended.vim' > ~/.vimrc
 
-echo "Installed the vimJuang configuration successfully! HEEHEE~~~"
+echo "Successfully Install vimJuang Configurations!!!"
+
+###Install Plugins###
+
+echo "Installing Plugins..."
+
+vim +PluginInstall +qall
+
+echo "Successfully Install Plugins!!!"
+
+echo "Enjoy~~~!!!"
