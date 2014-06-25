@@ -1,12 +1,4 @@
 """"""""""""""""""""""""""""""
-" => Load pathogen paths
-""""""""""""""""""""""""""""""
-"call pathogen#infect('~/.vimJuang/sources_forked/{}')
-"call pathogen#infect('~/.vimJuang/sources_non_forked/{}')
-call pathogen#infect('~/.vimJuang/plugins/{}')
-call pathogen#helptags()
-
-""""""""""""""""""""""""""""""
 " => Taglist plugin
 """"""""""""""""""""""""""""""
 map <leader>l :TlistToggle<cr><c-h>
