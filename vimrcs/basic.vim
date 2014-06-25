@@ -1,5 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Content:
+"    -> Vundle Setup
 "    -> General
 "    -> VIM user interface
 "    -> Colors and Fonts
@@ -15,6 +16,54 @@
 "    -> Helper functions
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vundle Setup
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vimJuang/plugins/Vundle.vim
+call vundle#begin()
+
+" pass a path where Vundle should install plugins
+call vundle#begin('~/.vimJuang/plugins')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" plugins on GitHub repo
+Plugin 'mileszs/ack.vim'
+Plugin 'jlanzarotta/bufexplorer'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'junegunn/goyo.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'SirVer/ultisnips'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-commentary'
+Plugin 'skammer/vim-css-color'
+Plugin 'terryma/vim-expand-region'
+Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'honza/vim-snippets'
+Plugin 'tpope/vim-surround'
+
+" plugins from http://vim-scripts.org/vim/scripts.html
+Plugin 'YankRing.vim'
+Plugin 'taglist.vim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
+filetype plugin indent on    " required
+
+" Brief help
+" :PluginList          - list configured plugins
+" :PluginInstall(!)    - install (update) plugins
+" :PluginSearch(!) foo - search (or refresh cache first) for foo
+" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
