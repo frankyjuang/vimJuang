@@ -1,6 +1,5 @@
-temp_dirs/undodir*
-temp_dirs/yankring_history_v2.txt
 tags
-set_tabline.vim
+temp_dirs/**
+!temp_dirs/README.md
 plugins/**
 !plugins/Vundle.vim
