@@ -8,7 +8,7 @@
 "    -> Text, tab and indent related
 "    -> Visual mode related
 "    -> Moving around, tabs and buffers
-"    -> Status line
+"    -> Status line & Tabline
 "    -> Editing mappings
 "    -> vimgrep searching and cope displaying
 "    -> Spell checking
@@ -49,10 +49,11 @@ Plugin 'terryma/vim-expand-region'
 Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-surround'
+Plugin 'Valloric/YouCompleteMe'
 
 " plugins from http://vim-scripts.org/vim/scripts.html
-Plugin 'YankRing.vim'
 Plugin 'taglist.vim'
+Plugin 'YankRing.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -255,7 +256,6 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Specify the behavior when switching between buffers 
 set switchbuf=useopen,usetab,newtab
-set showtabline=2
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
@@ -267,13 +267,43 @@ set viminfo^=%
 
 
 """"""""""""""""""""""""""""""
-" => Status line
+" => Status line & Tabline
 """"""""""""""""""""""""""""""
+" Status line settings
 " Always show the status line
 set laststatus=2
 
 " Format the status line if plugin vim-airline is not working
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+
+
+" Tabline settings
+" Based on mkitt/tabline.vim
+function! MyTabline()
+  let s = ''
+  for i in range(tabpagenr('$'))
+    let tab = i + 1
+    let winnr = tabpagewinnr(tab)
+    let buflist = tabpagebuflist(tab)
+    let bufnr = buflist[winnr - 1]
+    let bufname = bufname(bufnr)
+    let bufmodified = getbufvar(bufnr, "&mod")
+
+    let s .= '%' . tab . 'T'
+    let s .= (tab == tabpagenr() ? '%#TabLineSel#' : '%#TabLine#')
+    let s .= ' ' . tab .':'
+    let s .= (bufname != '' ? '['. fnamemodify(bufname, ':t') . '] ' : '[No Name] ')
+
+    if bufmodified
+      let s .= '[+] '
+    endif
+  endfor
+
+  let s .= '%#TabLineFill#'
+  return s
+endfunction
+set tabline=%!MyTabline()
+set showtabline=2
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -303,36 +333,6 @@ func! DeleteTrailingWS()
 endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Ack searching and cope displaying
-"    requires ack.vim - it's much better than vimgrep/grep
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" When you press gv you Ack after the selected text
-vnoremap <silent> gv :call VisualSelection('gv', '')<CR>
-
-" Open Ack and put the cursor in the right position
-map <leader>g :Ack 
-
-" When you press <leader>r you can search and replace the selected text
-vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
-
-" Do :help cope if you are unsure what cope is. It's super useful!
-"
-" When you search with Ack, display your results in cope by doing:
-"   <leader>cc
-"
-" To go to the next search result do:
-"   <leader>n
-"
-" To go to the previous search results do:
-"   <leader>p
-"
-map <leader>cc :botright cope<cr>
-map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
-map <leader>n :cn<cr>
-map <leader>p :cp<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
