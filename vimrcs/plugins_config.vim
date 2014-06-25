@@ -98,3 +98,10 @@ let g:goyo_width=100
 let g:goyo_margin_top = 2
 let g:goyo_margin_bottom = 2
 nnoremap <silent> <leader>z :Goyo<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Ultisnips config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:UltiSnipsUsePythonVersion = 3 
+let g:UltiSnipsSnippetsDir = '~/.vimJuang/plugins/vim-snippets/snippets'
+

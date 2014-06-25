@@ -48,6 +48,7 @@
 [submodule "plugins/YankRing.vim"]
 	path = plugins/YankRing.vim
 	url = https://github.com/vim-scripts/YankRing.vim.git
+    ignore = dirty
 [submodule "plugins/emmet-vim"]
 	path = plugins/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
