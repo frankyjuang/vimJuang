@@ -3,6 +3,3 @@ temp_dirs/*
 temp_dirs/*/
 !temp_dirs/README.md
 plugins/*
-plugins/*/
-!plugins/Vundle.vim
-!plugins/Vundle.vim/
