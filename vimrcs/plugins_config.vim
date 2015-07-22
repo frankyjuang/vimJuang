@@ -73,7 +73,7 @@ au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 let g:airline_theme="light"
 let g:airline_powerline_fonts = 1
 let g:airline_section_b = '%{getcwd()}'
-let g:airline_detect_whitespace = 0
+let g:airline#extensions#whitespace#enabled = 0
 let g:airline_section_z = '%3p%% %l:%c'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

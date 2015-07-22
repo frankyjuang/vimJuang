@@ -49,9 +49,10 @@ Plugin 'terryma/vim-expand-region'
 Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-surround'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 " plugins from http://vim-scripts.org/vim/scripts.html
+Plugin 'matchit.zip'
 Plugin 'taglist.vim'
 Plugin 'YankRing.vim'
 
