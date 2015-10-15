@@ -20,3 +20,7 @@ vim +PluginInstall +qall
 echo "Successfully Install Plugins!!!"
 
 echo "Enjoy~~~!!!"
+
+echo "install.sh will be DELETED in 3 millsecs..."
+
+rm -- "$0"
