@@ -45,26 +45,16 @@ call vundle#begin('~/.vimJuang/plugins')
 Plugin 'gmarik/Vundle.vim'
 
 " plugins on GitHub repo
-Plugin 'mileszs/ack.vim'
 Plugin 'jlanzarotta/bufexplorer'
-Plugin 'kien/ctrlp.vim'
-Plugin 'mattn/emmet-vim'
-Plugin 'junegunn/goyo.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
-Plugin 'SirVer/ultisnips'
 Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-commentary'
-Plugin 'skammer/vim-css-color'
 Plugin 'terryma/vim-expand-region'
-Plugin 'michaeljsmith/vim-indent-object'
-Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-surround'
-" Plugin 'Valloric/YouCompleteMe'
 
 " plugins from http://vim-scripts.org/vim/scripts.html
 Plugin 'matchit.zip'
-Plugin 'taglist.vim'
 Plugin 'YankRing.vim'
 
 " All of your Plugins must be added before the following line
