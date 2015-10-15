@@ -56,7 +56,6 @@ Plugin 'tpope/vim-surround'
 
 " plugins from http://vim-scripts.org/vim/scripts.html
 Plugin 'matchit.zip'
-Plugin 'YankRing.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

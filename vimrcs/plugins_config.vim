@@ -7,23 +7,11 @@ let g:bufExplorerFindActive=1
 let g:bufExplorerSortBy='name'
 map <leader>bb :BufExplorer<cr>
 
-
-""""""""""""""""""""""""""""""
-" => YankRing
-""""""""""""""""""""""""""""""
-if has("win16") || has("win32")
-    " Don't do anything
-else
-    let g:yankring_history_dir = '~/.vimJuang/temp_dirs/'
-endif
-
-
 """"""""""""""""""""""""""""""
 " => Vim grep
 """"""""""""""""""""""""""""""
 let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
 set grepprg=/bin/grep\ -nH
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
@@ -43,7 +31,6 @@ map <leader>tt :TagbarToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vmap Si S(i_<esc>f)
 au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-airline config 
