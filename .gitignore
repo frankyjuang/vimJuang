@@ -1,4 +1,5 @@
 tags
 temp_dirs/
 !temp_dirs/README.md
-plugins/*
+plugins/
+!plugins/README.md
