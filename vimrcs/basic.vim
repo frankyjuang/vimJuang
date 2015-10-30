@@ -81,8 +81,8 @@ filetype plugin indent on    " required
 " Enable mouse operation
 set mouse=a 
 
-" Show number line
-set nu
+" Show relative number line
+set rnu
 
 " Sets how many lines of history VIM has to remember
 set history=700
@@ -213,6 +213,8 @@ set linebreak
 set autoindent
 set smartindent
 set wrap
+
+map <leader>= ggVG=<CR>
 
 
 """"""""""""""""""""""""""""""
