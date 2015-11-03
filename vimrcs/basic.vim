@@ -82,6 +82,7 @@ filetype plugin indent on    " required
 set mouse=a 
 
 " Show relative number line
+set nu
 set rnu
 
 " Sets how many lines of history VIM has to remember
