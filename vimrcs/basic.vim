@@ -52,6 +52,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
 Plugin 'terryma/vim-expand-region'
+Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 
 " plugins from http://vim-scripts.org/vim/scripts.html
