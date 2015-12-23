@@ -41,7 +41,7 @@ call vundle#begin()
 call vundle#begin('~/.vimJuang/plugins')
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " plugins on GitHub repo
 Plugin 'jlanzarotta/bufexplorer'
