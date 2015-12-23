@@ -10,9 +10,8 @@
 "    -> Moving around, tabs and buffers
 "    -> Status line & Tabline
 "    -> Editing mappings
-"    -> vimgrep searching and cope displaying
 "    -> Spell checking
-"    -> Misc
+"    -> Command mode related
 "    -> Helper functions
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -103,6 +102,15 @@ let g:mapleader = ","
 
 " :W sudo saves the file 
 command W w !sudo tee % > /dev/null
+
+" Fix Gnome-Terminal Meta Key
+let c='a'
+while c <= 'z'
+    exec "set <A-".c.">=\e".c
+    exec "imap \e".c." <A-".c.">"
+    let c = nr2char(1+char2nr(c))
+endw
+set timeout ttimeoutlen=50
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -196,6 +204,19 @@ set ffs=unix,dos,mac
 set nobackup
 set nowritebackup
 set noswapfile
+
+" Turn persistent undo on 
+let vimDir = '$HOME/.vimJuang'
+let &runtimepath.=','.vimDir
+if has('persistent_undo')
+    let myUndoDir = expand(vimDir . '/undodir')
+    " Create dirs
+    call system('mkdir ' . myUndoDir)
+    let &undodir = myUndoDir
+    set undofile
+	set undolevels=1000
+	set undoreload=10000
+endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -324,11 +345,13 @@ set showtabline=2
 " Remap VIM 0 to first non-blank character
 map 0 ^
 
-" Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+" Move a line of text using ALT+[jk] or Comamnd+[jk] on map
+nmap <A-j> :m .+1<CR>==
+nmap <A-k> :m .-2<CR>==
+imap <A-j> <Esc>:m .+1<CR>==gi
+imap <A-k> <Esc>:m .-2<CR>==gi
+vmap <A-j> :m '>+1<CR>gv=gv
+vmap <A-k> :m '<-2<CR>gv=gv
 
 if has("mac") || has("macunix")
   nmap <D-j> <M-j>
@@ -346,6 +369,15 @@ endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
+" Remove the Windows ^M - when the encodings gets messed up
+noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+
+" Toggle paste mode on and off
+map <leader>pp :setlocal paste!<cr>
+
+" Insert new line in normal mode
+nmap <CR> o<Esc>
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
@@ -361,20 +393,11 @@ map <leader>s? z=
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Misc
+" => Command mode related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remove the Windows ^M - when the encodings gets messed up
-noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
-
-" Quickly open a buffer for scribble
-map <leader>q :e ~/buffer<cr>
-
-" Quickly open a markdown buffer for scribble
-map <leader>x :e ~/buffer.md<cr>
-
-" Toggle paste mode on and off
-map <leader>pp :setlocal paste!<cr>
-
+" $q is super useful when browsing on the command line
+" it deletes everything until the last slash 
+cno $q <C-\>eDeleteTillSlash()<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -407,7 +430,6 @@ function! VisualSelection(direction, extra_filter) range
     let @" = l:saved_reg
 endfunction
 
-
 " Returns true if paste mode is enabled
 function! HasPaste()
     if &paste
@@ -436,3 +458,23 @@ function! <SID>BufcloseCloseIt()
      execute("bdelete! ".l:currentBufNum)
    endif
 endfunction
+
+func! DeleteTillSlash()
+    let g:cmd = getcmdline()
+
+    if has("win16") || has("win32")
+        let g:cmd_edited = substitute(g:cmd, "\\(.*\[\\\\]\\).*", "\\1", "")
+    else
+        let g:cmd_edited = substitute(g:cmd, "\\(.*\[/\]\\).*", "\\1", "")
+    endif
+
+    if g:cmd == g:cmd_edited
+        if has("win16") || has("win32")
+            let g:cmd_edited = substitute(g:cmd, "\\(.*\[\\\\\]\\).*\[\\\\\]", "\\1", "")
+        else
+            let g:cmd_edited = substitute(g:cmd, "\\(.*\[/\]\\).*/", "\\1", "")
+        endif
+    endif   
+
+    return g:cmd_edited
+endfunc
