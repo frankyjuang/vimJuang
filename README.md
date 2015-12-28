@@ -28,3 +28,7 @@ You need to install powerline font [HERE](https://github.com/powerline/fonts.git
 - [vim-expand-region](https://github.com/terryma/vim-expand-region): Vim plugin that allows you to visually select increasingly larger regions of text using the same key combination.
 - [vim-fugitive](https://github.com/tpope/vim-fugitive): A Git wrapper so awesome, it should be illegal
 - [vim-surround](https://github.com/tpope/vim-surround): Quoting/parenthesizing made simple
+
+
+## Color Scheme
+[Tomorrow-Night](https://github.com/chriskempson/tomorrow-theme)
