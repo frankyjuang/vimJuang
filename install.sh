@@ -8,3 +8,5 @@ mkdir -p ~/.vimJuang/plugins
 git clone https://github.com/VundleVim/Vundle.vim ~/.vimJuang/plugins/Vundle.vim
 
 vim +PluginInstall +qall
+
+echo 'vimJuang install completed'
