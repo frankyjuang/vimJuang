@@ -22,17 +22,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" Setting up Vundle
-let iCanHazVundle=1
-let vundle_readme=expand('~/.vimJuang/plugins/Vundle.vim/README.md')
-if !filereadable(vundle_readme)
-    echo "Installing Vundle.."
-    echo ""
-    silent !mkdir -p ~/.vimJuang/plugins
-    silent !git clone https://github.com/VundleVim/Vundle.vim ~/.vimJuang/plugins/Vundle.vim
-    let iCanHazVundle=0
-endif
-"
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vimJuang/plugins/Vundle.vim
 call vundle#begin()
@@ -60,19 +49,7 @@ Plugin 'matchit.zip'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
-if iCanHazVundle == 0
-    echo "Installing Bundles, please ignore key map error messages"
-    echo ""
-    :PluginInstall
-endif
-
 filetype plugin indent on    " required
-
-" Brief help
-" :PluginList          - list configured plugins
-" :PluginInstall(!)    - install (update) plugins
-" :PluginSearch(!) foo - search (or refresh cache first) for foo
-" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
