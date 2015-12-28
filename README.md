@@ -13,6 +13,10 @@ cd ~/.vimJuang
 git pull --rebase
 ```
 
+## Why are some symbols missing in my statusbar?
+You need to install powerline font [HERE](https://github.com/powerline/fonts.git)!
+
+
 ## Included Plugins
 - [Vundle.vim](https://github.com/VundleVim/Vundle.vim): The plug-in manager for Vim
 - [bufexplorer](https://github.com/jlanzarotta/bufexplorer): BufExplorer Plugin for Vim
