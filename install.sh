@@ -1,3 +1,4 @@
+rm -f ~/.vimrc
 echo 'set runtimepath+=~/.vimJuang
 
 source ~/.vimJuang/vimrcs/basic.vim
