@@ -1,17 +1,11 @@
 """"""""""""""""""""""""""""""
 " => bufExplorer
 """"""""""""""""""""""""""""""
-let g:bufExplorerDefaultHelp=0
-let g:bufExplorerShowRelativePath=1
-let g:bufExplorerFindActive=1
-let g:bufExplorerSortBy='name'
+let g:bufExplorerDefaultHelp = 0
+let g:bufExplorerShowRelativePath = 1
+let g:bufExplorerFindActive = 1
+let g:bufExplorerSortBy = 'name'
 map <leader>bb :BufExplorer<CR>
-
-""""""""""""""""""""""""""""""
-" => Vim grep
-""""""""""""""""""""""""""""""
-let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
-set grepprg=/bin/grep\ -nH
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
@@ -33,7 +27,7 @@ au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-airline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:airline_theme="light"
+let g:airline_theme = "light"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline_section_z = '%3p%% %l:%c'
@@ -49,3 +43,8 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_error_symbol = "✗"
 map <leader>ll :lne<CR>
 map <leader>lp :lp<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => NerdCommenter
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let NERDSpaceDelims = 1
