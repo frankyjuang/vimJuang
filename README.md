@@ -15,6 +15,14 @@ git pull --rebase
 
 ## Why are some symbols missing in my statusbar?
 You need to install powerline font [HERE](https://github.com/powerline/fonts.git)!
+Or just install it from AUR (Arch Linux only!)
+```
+yaourt python-powerline-git
+```
+Dejavu Sans Mono version only
+```
+yaourt ttf-dejavu-sans-mono-powerline-git
+```
 
 
 ## Included Plugins
