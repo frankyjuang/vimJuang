@@ -1,7 +1,7 @@
 """"""""""""""""""""""""""""""
 " => MISC section
 """"""""""""""""""""""""""""""
-au BufNewFile,BufRead *.smali set ft=smali
+au BufNewFile,BufRead *.smali set filetype=smali
 
 
 """"""""""""""""""""""""""""""

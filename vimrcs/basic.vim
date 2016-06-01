@@ -76,6 +76,10 @@ filetype indent on
 let mapleader = ","
 let g:mapleader = ","
 
+" :q shortcut
+map <leader>q :q<CR>
+" :w shortcut
+map <leader>w :w<CR>
 " :W sudo saves the file 
 command W w !sudo tee % > /dev/null
 
@@ -258,7 +262,7 @@ map <leader>tm :tabmove
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
-map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
+map <leader>te :tabedit <c-r>=escape(expand("%:p:h"), ' ')<cr>/
 
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
@@ -373,10 +377,6 @@ function! VisualSelection(direction, extra_filter) range
 
     if a:direction == 'b'
         execute "normal ?" . l:pattern . "^M"
-    elseif a:direction == 'gv'
-        call CmdLine("Ack \"" . l:pattern . "\" " )
-    elseif a:direction == 'replace'
-        call CmdLine("%s" . '/'. l:pattern . '/')
     elseif a:direction == 'f'
         execute "normal /" . l:pattern . "^M"
     endif
