@@ -110,6 +110,9 @@ else
     set wildignore+=.git\*,.hg\*,.svn\*
 endif
 
+" Turn on Wild completion ignore case
+set wildignorecase
+
 "Always show current position
 set ruler
 
