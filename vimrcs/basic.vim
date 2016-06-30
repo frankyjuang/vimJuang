@@ -81,7 +81,9 @@ map <leader>q :q<CR>
 " :w shortcut
 map <leader>w :w<CR>
 " :W sudo saves the file 
-command W w !sudo tee % > /dev/null
+command! W w !sudo tee % > /dev/null
+" reload vimrc
+map <leader>r :call ReloadRC()<CR>
 
 " Fix Gnome-Terminal Meta Key
 let c='a'
@@ -390,7 +392,7 @@ function! VisualSelection(direction, extra_filter) range
     let @" = l:saved_reg
 endfunction
 
-" Returns true if paste mode is enabled
+" Return true if paste mode is enabled
 function! HasPaste()
     if &paste
         return 'PASTE MODE  '
@@ -398,7 +400,7 @@ function! HasPaste()
     return ''
 endfunction
 
-" Don't close window, when deleting a buffer
+" Don't close window when deleting a buffer
 command! Bclose call <SID>BufcloseCloseIt()
 function! <SID>BufcloseCloseIt()
    let l:currentBufNum = bufnr("%")
@@ -419,3 +421,13 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
+" tricks to avoid E127: Cannot redefine function ReloadRC
+if exists("*ReloadRC")
+    finish
+endif
+
+" Reload vimrc, and reload airline
+function! ReloadRC()
+    source $MYVIMRC
+    AirlineRefresh
+endfunction
