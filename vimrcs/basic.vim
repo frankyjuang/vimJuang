@@ -354,6 +354,9 @@ map <leader>pp :setlocal paste!<cr>
 " Insert new line in normal mode
 nmap <CR> o<Esc>
 
+" Remap gt and gy to switch tabs
+noremap gt gT
+noremap gy gt
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
