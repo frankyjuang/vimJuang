@@ -55,7 +55,7 @@ filetype plugin indent on    " required
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable mouse operation
-set mouse=a 
+set mouse=a
 
 " Show relative number line
 set nu
@@ -80,7 +80,7 @@ let g:mapleader = ","
 map <leader>q :q<CR>
 " :w shortcut
 map <leader>w :w<CR>
-" :W sudo saves the file 
+" :W sudo saves the file
 command! W w !sudo tee % > /dev/null
 " reload vimrc
 map <leader>r :call ReloadRC()<CR>
@@ -131,17 +131,17 @@ set whichwrap+=<,>,h,l
 " Ignore case when searching
 set ignorecase
 
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 
 " Highlight search results
 set hlsearch
 
 " Makes search act like search in modern browsers
-set incsearch 
+set incsearch
 
 " Don't redraw while executing macros (good performance config)
-set lazyredraw 
+set lazyredraw
 
 " For regular expressions turn magic on
 set magic
@@ -160,7 +160,7 @@ set foldcolumn=1
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
-syntax enable 
+syntax enable
 
 "Enable 256 colors
 set t_Co=256
@@ -187,7 +187,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-" Turn persistent undo on 
+" Turn persistent undo on
 let vimDir = '$HOME/.vimJuang'
 let &runtimepath.=','.vimDir
 if has('persistent_undo')
@@ -220,6 +220,9 @@ set smartindent
 set wrap
 
 map <leader>= ggVG=<CR>
+
+" Delete trailing white space on save
+autocmd BufWrite * :call DeleteTrailingWS()
 
 
 """"""""""""""""""""""""""""""
@@ -254,7 +257,7 @@ map <C-l> <C-W>l
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove 
+map <leader>tm :tabmove
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
@@ -263,7 +266,7 @@ map <leader>te :tabedit <c-r>=escape(expand("%:p:h"), ' ')<cr>/
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
-" Specify the behavior when switching between buffers 
+" Specify the behavior when switching between buffers
 set switchbuf=useopen,usetab,newtab
 
 " Return to last edit position when opening files (You want this!)
@@ -336,15 +339,6 @@ if has("mac") || has("macunix")
   vmap <D-k> <M-k>
 endif
 
-" Delete trailing white space on save, useful for Python and CoffeeScript ;)
-func! DeleteTrailingWS()
-  exe "normal mz"
-  %s/\s\+$//ge
-  exe "normal `z"
-endfunc
-autocmd BufWrite *.py :call DeleteTrailingWS()
-autocmd BufWrite *.coffee :call DeleteTrailingWS()
-
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
@@ -385,6 +379,13 @@ function! HasPaste()
     endif
     return ''
 endfunction
+
+" Delete trailing white space
+func! DeleteTrailingWS()
+  exe "normal mz"
+  %s/\s\+$//ge
+  exe "normal `z"
+endfunc
 
 " tricks to avoid E127: Cannot redefine function ReloadRC
 if exists("*ReloadRC")
