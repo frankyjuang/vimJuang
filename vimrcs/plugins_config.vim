@@ -5,24 +5,33 @@ let g:bufExplorerDefaultHelp = 0
 let g:bufExplorerShowRelativePath = 1
 let g:bufExplorerFindActive = 1
 let g:bufExplorerSortBy = 'name'
-map <leader>bb :BufExplorer<CR>
+map <leader>b<Space> :BufExplorer<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Nerd Tree
+" => NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>nn :NERDTreeToggle<CR>
+function! ToggleNERDTreeFind()
+    if g:NERDTree.IsOpen()
+        execute ':NERDTreeClose'
+    else
+        execute ':NERDTreeFind'
+    endif
+endfunction
+map <leader>n<Space> :call ToggleNERDTreeFind()<CR>
+" auto close tab if there is only nerdtree left
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => TagBar
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>tt :TagbarToggle<CR>
+map <leader>t<Space> :TagbarToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => surround.vim 
+" => surround.vim
 " Annotate strings with gettext http://amix.dk/blog/post/19678
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vmap Si S(i_<esc>f)
-au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
+autocmd FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-airline
