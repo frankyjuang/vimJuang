@@ -24,6 +24,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => TagBar
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:tagbar_autofocus = 1
+let g:tagbar_sort = 0
 map <leader>t<Space> :TagbarToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -67,4 +69,4 @@ endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NerdCommenter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" let NERDSpaceDelims = 1
+let NERDSpaceDelims = 1
