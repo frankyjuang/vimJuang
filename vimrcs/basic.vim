@@ -80,6 +80,8 @@ let g:mapleader = ","
 map <leader>q :q<CR>
 " :w shortcut
 map <leader>w :w<CR>
+" :e shortcut
+map <leader>e :e<CR>
 " :W sudo saves the file
 command! W w !sudo tee % > /dev/null
 " reload vimrc
