@@ -226,6 +226,8 @@ map <leader>= ggVG=<CR>
 " Delete trailing white space on save
 autocmd BufWrite * :call DeleteTrailingWS()
 
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+map <leader>s :set list!<CR>
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
