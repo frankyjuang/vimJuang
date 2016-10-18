@@ -87,9 +87,7 @@ command! W w !sudo tee % > /dev/null
 " reload vimrc
 map <leader>r :call ReloadRC()<CR>
 
-set clipboard=unnamed
-
-" Fix Gnome-Terminal Meta Key
+" Fix Meta Key
 let c='a'
 while c <= 'z'
     exec "set <A-".c.">=\e".c
