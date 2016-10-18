@@ -87,6 +87,8 @@ command! W w !sudo tee % > /dev/null
 " reload vimrc
 map <leader>r :call ReloadRC()<CR>
 
+set clipboard=unnamed
+
 " Fix Gnome-Terminal Meta Key
 let c='a'
 while c <= 'z'
@@ -335,13 +337,6 @@ imap <A-j> <Esc>:m .+1<CR>==gi
 imap <A-k> <Esc>:m .-2<CR>==gi
 vmap <A-j> :m '>+1<CR>gv=gv
 vmap <A-k> :m '<-2<CR>gv=gv
-
-if has("mac") || has("macunix")
-  nmap <D-j> <M-j>
-  nmap <D-k> <M-k>
-  vmap <D-j> <M-j>
-  vmap <D-k> <M-k>
-endif
 
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
