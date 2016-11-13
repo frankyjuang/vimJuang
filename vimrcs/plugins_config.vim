@@ -52,17 +52,16 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height = 2
 let g:syntastic_check_on_wq = 0
 let g:syntastic_error_symbol = "✗"
+let g:syntastic_python_python_exec = "python3"
 map <leader>ll :lne<CR>
 map <leader>lp :lp<CR>
 " toggle python version
 command! SynPython call TogglePythonVersion()
 function! TogglePythonVersion()
-    if !exists("g:syntastic_python_python_exec")
+    if g:syntastic_python_python_exec == "python3"
         let g:syntastic_python_python_exec = "python2"
-    elseif g:syntastic_python_python_exec == "python2"
-        let g:syntastic_python_python_exec = "python3"
     else
-        let g:syntastic_python_python_exec = "python2"
+        let g:syntastic_python_python_exec = "python3"
     endif
 endfunction
 
