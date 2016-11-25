@@ -64,8 +64,3 @@ function! TogglePythonVersion()
         let g:syntastic_python_python_exec = "python3"
     endif
 endfunction
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => NerdCommenter
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let NERDSpaceDelims = 1
