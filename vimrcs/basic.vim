@@ -41,6 +41,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'terryma/vim-expand-region'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'lervag/vimtex'
 
 " plugins from http://vim-scripts.org/vim/scripts.html
 Plugin 'matchit.zip'
@@ -218,7 +219,9 @@ set tabstop=4
 
 set linebreak
 set autoindent
-set smartindent
+set cindent
+set cinkeys-=0#
+set indentkeys-=0#
 set wrap
 
 map <leader>= ggVG=<CR>
