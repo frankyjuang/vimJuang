@@ -284,6 +284,8 @@ autocmd BufReadPost *
 " Remember info about open buffers on close
 set viminfo^=%
 
+" Use system clipboard
+set clipboard=unnamedplus
 
 """"""""""""""""""""""""""""""
 " => Status line & Tabline
