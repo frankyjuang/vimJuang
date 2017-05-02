@@ -330,9 +330,6 @@ set showtabline=2
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remap VIM 0 to first non-blank character
-map 0 ^
-
 " Move a line of text using ALT+[jk] or Comamnd+[jk] on map
 nmap <A-j> :m .+1<CR>==
 nmap <A-k> :m .-2<CR>==
