@@ -190,6 +190,11 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" Automatically reload buffer when moving cursor. Helpful for syncing same
+" file opened at multiple places.
+set autoread
+au CursorMoved,CursorMovedI * checktime
+
 " Turn persistent undo on
 let vimDir = '$HOME/.vimJuang'
 let &runtimepath.=','.vimDir
