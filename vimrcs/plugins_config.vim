@@ -64,3 +64,9 @@ function! TogglePythonVersion()
         let g:syntastic_python_python_exec = "python3"
     endif
 endfunction
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => NERDCommenter
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let NERDSpaceDelims = 1
+let g:NERDAltDelims_python = 1  " Avoid having two spaces before delimiter.
