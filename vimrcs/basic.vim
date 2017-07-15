@@ -237,7 +237,7 @@ map <leader>= ggVG=<CR>
 autocmd BufWrite * :call DeleteTrailingWS()
 
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
-map <leader>s :set list!<CR>
+map <leader>s<space> :set list!<CR>
 
 """"""""""""""""""""""""""""""
 " => Visual mode related

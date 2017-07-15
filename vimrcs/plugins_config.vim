@@ -46,24 +46,15 @@ let g:airline_section_z = "%3p%% %l:%c"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => syntastic
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:syntastic_cpp_compiler_options = " -std=c++11"
+let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': []}
+nnoremap <leader>sc :SyntasticCheck<CR>
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height = 2
-let g:syntastic_check_on_wq = 0
 let g:syntastic_error_symbol = "✗"
-let g:syntastic_python_python_exec = "python3"
+" Go thru errors.
 map <leader>ll :lne<CR>
 map <leader>lp :lp<CR>
-" toggle python version
-command! SynPython call TogglePythonVersion()
-function! TogglePythonVersion()
-    if g:syntastic_python_python_exec == "python3"
-        let g:syntastic_python_python_exec = "python2"
-    else
-        let g:syntastic_python_python_exec = "python3"
-    endif
-endfunction
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDCommenter
