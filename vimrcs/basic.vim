@@ -44,6 +44,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'lervag/vimtex'
 
 Plugin 'vim-python/python-syntax'
+Plugin 'pangloss/vim-javascript'
 
 " plugins from http://vim-scripts.org/vim/scripts.html
 Plugin 'matchit.zip'
