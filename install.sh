@@ -3,7 +3,7 @@ echo 'set runtimepath+=~/.vimJuang
 
 source ~/.vimJuang/vimrcs/basic.vim
 source ~/.vimJuang/vimrcs/filetypes.vim
-source ~/.vimJuang/vimrcs/plugins_config.vim' > ~/.vimrc
+source ~/.vimJuang/vimrcs/plugins.vim' > ~/.vimrc
 
 if [ -f plugins/Vundle.vim/README.md ]; then
     printf "Vundle alreadly exists!\n"
