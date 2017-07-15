@@ -3,22 +3,10 @@
 """"""""""""""""""""""""""""""
 au BufNewFile,BufRead *.smali set filetype=smali
 
-
 """"""""""""""""""""""""""""""
 " => Python section
 """"""""""""""""""""""""""""""
-let python_highlight_all = 1
-au FileType python syn keyword pythonDecorator True None False self
-au FileType python map <buffer> F :set foldmethod=indent<cr>
-au FileType python inoremap <buffer> $r return 
-au FileType python inoremap <buffer> $i import 
-au FileType python inoremap <buffer> $p print 
-au FileType python inoremap <buffer> $f #--- PH ----------------------------------------------<esc>FP2xi
-au FileType python map <buffer> <leader>1 /class 
-au FileType python map <buffer> <leader>2 /def 
-au FileType python map <buffer> <leader>C ?class 
-au FileType python map <buffer> <leader>D ?def 
-
+let g:python_highlight_all = 1
 
 """"""""""""""""""""""""""""""
 " => JavaScript section
@@ -30,10 +18,10 @@ au FileType javascript setl nocindent
 au FileType javascript imap <c-t> AJS.log();<esc>hi
 au FileType javascript imap <c-a> alert();<esc>hi
 
-au FileType javascript inoremap <buffer> $r return 
+au FileType javascript inoremap <buffer> $r return
 au FileType javascript inoremap <buffer> $f //--- PH ----------------------------------------------<esc>FP2xi
 
-function! JavaScriptFold() 
+function! JavaScriptFold()
     setl foldmethod=syntax
     setl foldlevelstart=1
     syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend

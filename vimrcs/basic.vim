@@ -43,6 +43,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'lervag/vimtex'
 
+Plugin 'vim-python/python-syntax'
+
 " plugins from http://vim-scripts.org/vim/scripts.html
 Plugin 'matchit.zip'
 
