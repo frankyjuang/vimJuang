@@ -16,7 +16,9 @@ git pull --rebase
 
 ## Plugins
 - [Vundle.vim](https://github.com/VundleVim/Vundle.vim): The plug-in manager for Vim.
+- [ack.vim](https://github.com/mileszs/ack.vim): Vim plugin for the Perl module / CLI script 'ack'.
 - [bufexplorer](https://github.com/jlanzarotta/bufexplorer): BufExplorer Plugin for Vim.
+- [fzf.vim](https://github.com/junegunn/fzf.vim): Things you can do with fzf and Vim.
 - [matchit.zip](https://github.com/vim-scripts/matchit.zip): Extend % matching for HTML, LaTeX, and many other languages.
 - [nerdtree](https://github.com/scrooloose/nerdtree): A tree explorer plugin for vim.
 - [nerdcommenter](https://github.com/scrooloose/nerdcommenter): Vim plugin for intensely orgasmic commenting.
@@ -30,7 +32,9 @@ git pull --rebase
 - [vimtex](https://github.com/lervag/vimtex): Support for writing LaTeX documents.
 
 ## Dependencies
-- (Optional) [Exuberant Ctags](http://ctags.sourceforge.net/): generate tag files. Needed by plugin tagbar.
+- [the_silver_searcher](https://github.com/ggreer/the_silver_searcher): A code-searching tool similar to ack, but faster. Needed by plugin ack.vim.
+- [fzf](https://github.com/junegunn/fzf): A command-line fuzzy finder written in Go. Needed by plugin fzf.vim.
+- [Exuberant Ctags](http://ctags.sourceforge.net/): generate tag files. Needed by plugin tagbar.
 - (Optional) [Pylint](http://ctags.sourceforge.net/): Better syntax checker for python. Used by plugin syntastic.
 - (Optional) [ESLint](http://eslint.org/): The pluggable linting utility for JavaScript and JSX. Used by plugin syntastic. Require additional [config file](https://github.com/frankyjuang/confJuang/blob/master/eslintrc.js).
 

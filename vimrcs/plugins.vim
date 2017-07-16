@@ -1,3 +1,10 @@
+"""""""""""
+" ack.vim "
+"""""""""""
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
 """""""""""""""
 " bufExplorer "
 """""""""""""""
@@ -6,6 +13,13 @@ let g:bufExplorerShowRelativePath = 1
 let g:bufExplorerFindActive = 1
 let g:bufExplorerSortBy = 'name'
 map <leader>b<Space> :BufExplorer<CR>
+
+"""""""""""
+" fzf.vim "
+"""""""""""
+set rtp+=/usr/local/opt/fzf
+let g:fzf_buffers_jump = 1
+nnoremap <leader>f :Ag<CR>
 
 """""""""""""""""
 " nerdcommenter "

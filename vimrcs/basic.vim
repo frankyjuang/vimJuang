@@ -30,7 +30,9 @@ call vundle#begin('~/.vimJuang/plugins')
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins for general purpose
+Plugin 'mileszs/ack.vim'
 Plugin 'jlanzarotta/bufexplorer'
+Plugin 'junegunn/fzf.vim'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
