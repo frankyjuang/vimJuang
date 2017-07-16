@@ -32,6 +32,7 @@ git pull --rebase
 ## Dependencies
 - (Optional) [Exuberant Ctags](http://ctags.sourceforge.net/): generate tag files. Needed by plugin tagbar.
 - (Optional) [Pylint](http://ctags.sourceforge.net/): Better syntax checker for python. Used by plugin syntastic.
+- (Optional) [ESLint](http://eslint.org/): The pluggable linting utility for JavaScript and JSX. Used by plugin syntastic. Require additional [config file](https://github.com/frankyjuang/confJuang/blob/master/eslintrc.js).
 
 ## Color Scheme
 [Tomorrow-Night](https://github.com/chriskempson/tomorrow-theme)
