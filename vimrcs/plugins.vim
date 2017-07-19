@@ -17,7 +17,8 @@ map <leader>b<Space> :BufExplorer<CR>
 """""""""""
 " fzf.vim "
 """""""""""
-set rtp+=/usr/local/opt/fzf
+set rtp+=/usr/local/opt/fzf  " Install using Homebrew.
+set rtp+=$HOME/.fzf  " Install using git.
 let g:fzf_buffers_jump = 1
 nnoremap <leader>f :Ag<CR>
 
