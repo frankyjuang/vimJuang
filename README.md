@@ -35,6 +35,7 @@ git pull --rebase
 - [the_silver_searcher](https://github.com/ggreer/the_silver_searcher): A code-searching tool similar to ack, but faster. Needed by plugin ack.vim.
 - [fzf](https://github.com/junegunn/fzf): A command-line fuzzy finder written in Go. Needed by plugin fzf.vim.
 - [Exuberant Ctags](http://ctags.sourceforge.net/): generate tag files. Needed by plugin tagbar.
+- (Optional) [CppLint](https://github.com/google/styleguide/tree/gh-pages/cpplint): Automated checker to make sure a C++ file follows Google's C++ style guide. Used by plugin syntastic.
 - (Optional) [Pylint](https://www.pylint.org/): Better syntax checker for python. Used by plugin syntastic.
 - (Optional) [ESLint](http://eslint.org/): The pluggable linting utility for JavaScript and JSX. Used by plugin syntastic. Require additional [config file](https://github.com/frankyjuang/confJuang/blob/master/eslintrc.js).
 
