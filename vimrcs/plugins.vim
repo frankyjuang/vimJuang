@@ -27,6 +27,7 @@ nnoremap <leader>f :Ag<CR>
 """""""""""""""""
 let NERDSpaceDelims = 1
 let g:NERDAltDelims_python = 1  " Avoid having two spaces before delimiter.
+let g:NERDCustomDelimiters = { 'jinja': { 'left': '{#','right': '#}' } }
 
 """"""""""""
 " nerdtree "
