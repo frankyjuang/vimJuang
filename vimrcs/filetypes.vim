@@ -2,6 +2,9 @@
 " C++ "
 """""""
 let g:syntastic_cpp_compiler_options = " -std=c++11"
+let g:syntastic_cpp_checkers=["cpplint", "gcc"]
+let g:syntastic_cpp_cpplint_exec = "cpplint"
+let g:syntastic_cpp_cpplint_args = "--verbose=0"
 
 """"""
 " Go "
