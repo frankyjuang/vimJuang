@@ -3,6 +3,10 @@
 """""""
 let g:syntastic_cpp_compiler_options = " -std=c++11"
 
+""""""
+" Go "
+""""""
+let g:syntastic_go_checkers = ["golint", "go"]
 
 """"""""""""""
 " JavaScript "
