@@ -11,12 +11,16 @@ let g:syntastic_cpp_cpplint_args = "--verbose=0"
 """"""
 let g:syntastic_go_checkers = ["golint", "go"]
 
+""""""""
+" HTML "
+""""""""
+let g:syntastic_html_checkers = ["tidy", "eslint"]
+
 """"""""""""""
 " JavaScript "
 """"""""""""""
 let g:javascript_plugin_jsdoc = 1
 let g:syntastic_javascript_checkers=["eslint"]
-
 
 """"""""""
 " Python "
@@ -34,7 +38,6 @@ function! TogglePythonVersion()
         let g:syntastic_python_python_exec = "python3"
     endif
 endfunction
-
 
 """"""""
 " MISC "
