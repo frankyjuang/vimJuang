@@ -48,13 +48,15 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 """""""""""""
 let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': []}
 nnoremap <leader>sc :SyntasticCheck<CR>
+let g:syntastic_aggregate_errors = 1
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_loc_list_height = 2
+let g:syntastic_auto_jump = 1
 let g:syntastic_error_symbol = "✗"
+let g:syntastic_loc_list_height = 5
 " Go thru errors.
-map <leader>ll :lne<CR>
-map <leader>lp :lp<CR>
+map <leader>x :lclose<CR>
+map <leader>a :lne<CR>
+map <leader>d :lp<CR>
 
 """"""""""
 " tagbar "
