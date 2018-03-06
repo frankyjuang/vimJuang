@@ -48,6 +48,7 @@ Plugin 'lervag/vimtex'
 
 " Plugins for filetypes
 Plugin 'vim-python/python-syntax'
+Plugin 'fatih/vim-go'
 Plugin 'pangloss/vim-javascript'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 

@@ -28,8 +28,15 @@ git pull --rebase
 - [vim-airline-theme](https://github.com/vim-airline/vim-airline-theme): vim-airline's theme.
 - [vim-expand-region](https://github.com/terryma/vim-expand-region): Visually select increasingly larger regions of text using the same key combination.
 - [vim-fugitive](https://github.com/tpope/vim-fugitive): A Git wrapper so awesome, it should be illegal.
+- [vim-repeat](https://github.com/tpope/vim-repeat): Enable repeating supported plugin maps with ".".
 - [vim-surround](https://github.com/tpope/vim-surround): Quoting/parenthesizing made simple.
 - [vimtex](https://github.com/lervag/vimtex): Support for writing LaTeX documents.
+
+## Plugins for filetypes
+- [vim-python/python-syntax](https://github.com/vim-python/python-syntax): Python syntax highlighting for Vim.
+- [fatih/vim-go](https://github.com/fatih/vim-go): Go development plugin for Vim.
+- [pangloss/vim-javascript](https://github.com/pangloss/vim-javascript): Vastly improved Javascript indentation and syntax support in Vim.
+- [Glench/Vim-Jinja2-Syntax](https://github.com/Glench/Vim-Jinja2-Syntax): An up-to-date jinja2 syntax file.
 
 ## Dependencies
 - [the_silver_searcher](https://github.com/ggreer/the_silver_searcher): A code-searching tool similar to ack, but faster. Needed by plugin ack.vim.
@@ -38,6 +45,7 @@ git pull --rebase
 - (Optional) [CppLint](https://github.com/google/styleguide/tree/gh-pages/cpplint): Automated checker to make sure a C++ file follows Google's C++ style guide. Used by plugin syntastic.
 - (Optional) [Pylint](https://www.pylint.org/): Better syntax checker for python. Used by plugin syntastic.
 - (Optional) [ESLint](http://eslint.org/): The pluggable linting utility for JavaScript and JSX. Used by plugin syntastic. Require additional [config file](https://github.com/frankyjuang/confJuang/blob/master/eslintrc.js).
+- (Optional) [stylelint](https://stylelint.io/): A mighty, modern CSS linter. Used by plugin syntastic. Require additional [config file](https://github.com/stylelint/stylelint-config-standard). Checkout [confJuang](https://github.com/frankyjuang/confJuang/blob/master/README.md) for more information.
 
 ## Color Scheme
 [Tomorrow-Night](https://github.com/chriskempson/tomorrow-theme)

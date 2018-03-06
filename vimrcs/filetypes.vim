@@ -6,6 +6,11 @@ let g:syntastic_cpp_checkers=["cpplint", "gcc"]
 let g:syntastic_cpp_cpplint_exec = "cpplint"
 let g:syntastic_cpp_cpplint_args = "--verbose=0"
 
+"""""""
+" CSS "
+"""""""
+let g:syntastic_css_checkers = ["stylelint"]
+
 """"""
 " Go "
 """"""
