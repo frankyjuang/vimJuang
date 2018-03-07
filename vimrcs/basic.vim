@@ -31,12 +31,12 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Plugins for general purpose
 Plugin 'mileszs/ack.vim'
+Plugin 'w0rp/ale'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'junegunn/fzf.vim'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'vim-syntastic/syntastic'
 Plugin 'majutsushi/tagbar'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
