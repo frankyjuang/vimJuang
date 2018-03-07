@@ -65,6 +65,11 @@ let g:tagbar_autofocus = 1
 let g:tagbar_sort = 0
 map <leader>t<Space> :TagbarToggle<CR>
 
+""""""""""""
+" undotree "
+""""""""""""
+nnoremap <leader>d<space> :UndotreeToggle<CR>
+
 """""""""""""""
 " vim-airline "
 """""""""""""""
