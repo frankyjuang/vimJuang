@@ -54,7 +54,7 @@ function! ToggleNERDTreeFind()
         execute ':NERDTreeFind'
     endif
 endfunction
-map <leader>n<Space> :call ToggleNERDTreeFind()<CR>
+map <F3> :call ToggleNERDTreeFind()<CR>
 " auto close tab if there is only nerdtree left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
@@ -63,12 +63,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 """"""""""
 let g:tagbar_autofocus = 1
 let g:tagbar_sort = 0
-map <leader>t<Space> :TagbarToggle<CR>
+map <F6> :TagbarToggle<CR>
 
 """"""""""""
 " undotree "
 """"""""""""
-nnoremap <leader>d<space> :UndotreeToggle<CR>
+nnoremap <F4> :UndotreeToggle<CR>
 
 """""""""""""""
 " vim-airline "

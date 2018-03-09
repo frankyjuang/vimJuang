@@ -93,7 +93,7 @@ map <leader>e :e<CR>
 " :W sudo saves the file
 command! W w !sudo tee % > /dev/null
 " reload vimrc
-map <leader>r :call ReloadRC()<CR>
+map <F5> :call ReloadRC()<CR>
 
 " Fix Meta Key
 let c='a'
