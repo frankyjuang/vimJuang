@@ -77,3 +77,8 @@ let g:airline_theme = "light"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline_section_z = "%3p%% %l:%c"
+
+"""""""""""""""
+" vimtex"
+"""""""""""""""
+let g:tex_flavor = "latex"
